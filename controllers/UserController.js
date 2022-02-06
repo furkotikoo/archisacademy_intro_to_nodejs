@@ -16,17 +16,17 @@ const getUsersDetails = async (req, res) => {
         const customers = await knex('customers').select('*')
         res.json(customers)
     } catch (error) {
-        res.json('error' + error)
+        res.json({ error })
     }
 };
-const getUserDetails = async (req, res) => {
+const getUserDetailsById = async (req, res) => {
 
     const { id: customerid } = req.params;
     try {
         const customers = await knex('customers').where({ customerid }).first()
         res.json(customers)
     } catch (error) {
-        res.json('error' + error)
+        res.json({ error })
     }
 };
 
@@ -44,7 +44,7 @@ const createUser = async (req, res) => {
         res.json(user)
 
     } catch (error) {
-        res.json('error' + error)
+        res.json({ error })
     }
 };
 
@@ -64,7 +64,7 @@ const updateUser = async (req, res) => {
         res.json(user)
 
     } catch (error) {
-        res.json('error' + error)
+        res.json({ error })
     }
 };
 
@@ -73,20 +73,20 @@ const deleteUser = async (req, res) => {
     try {
         const { id: customerid } = req.params;
 
-        const user = await knex('customers')
+        await knex('customers')
             .where({ customerid })
-            .del()
+            .del();
 
         res.json("User deleted successfully")
 
     } catch (error) {
-        res.json('error' + error)
+        res.json({ error })
     }
 };
 
 module.exports = {
     getUsersDetails,
-    getUserDetails,
+    getUserDetailsById,
     createUser,
     updateUser,
     deleteUser
