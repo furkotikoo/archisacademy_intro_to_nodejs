@@ -1,18 +1,26 @@
 {
-  "name": "nodejs-intro",
+  "name": "nodejs-part2",
   "version": "1.0.0",
-  "description": "Nodejs applicaation with Express and Knex",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/furkotikoo/archisacademy_intro_to_nodejs.git"
+  },
   "author": "furkan",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/furkotikoo/archisacademy_intro_to_nodejs/issues"
+  },
+  "homepage": "https://github.com/furkotikoo/archisacademy_intro_to_nodejs#readme",
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
-    "knex": "^1.0.1",
+    "knex": "^1.0.2",
     "nodemon": "^2.0.15",
-    "pg": "^8.7.1"
+    "pg": "^8.7.3"
   }
 }
