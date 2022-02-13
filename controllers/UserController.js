@@ -1,13 +1,5 @@
 
-const knex = require('knex')({
-    client: 'pg',
-    connection: {
-        host: 'localhost',
-        user: 'admin',
-        password: 'admin',
-        database: 'app'
-    }
-});
+const knex = require('../database');
 
 
 const getUsersDetails = async (req, res) => {

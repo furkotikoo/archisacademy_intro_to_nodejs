@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "migrater": "knex migrate:make",
+    "migrate": "knex migrate:latest",
+    "seeder": "knex seed:make",
+    "seed": "knex seed:run"
   },
   "repository": {
     "type": "git",
@@ -15,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/furkotikoo/archisacademy_intro_to_nodejs/issues"
   },
-  "homepage": "https://github.com/furkotikoo/archisacademy_intro_to_nodejs#readme",
+  "homepage": "https://github.com/furkotikoo/archisacadSemy_intro_to_nodejs#readme",
   "dependencies": {
     "body-parser": "^1.19.1",
     "express": "^4.17.2",
