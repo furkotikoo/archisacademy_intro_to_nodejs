@@ -8,7 +8,7 @@ exports.up = function (knex) {
     return knex.schema.createTable('user_types', function (table) {
         table.increments();
         table.string('name');
-        table.string('description', 1000);
+        table.string('description');
         table.timestamps();
     })
 };
