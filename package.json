@@ -8,7 +8,8 @@
     "migrater": "knex migrate:make",
     "migrate": "knex migrate:latest",
     "seeder": "knex seed:make",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "migrate:rollback": "knex migrate:rollback"
   },
   "repository": {
     "type": "git",
